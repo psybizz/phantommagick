@@ -1,0 +1,1820 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        @font-face {
+            font-family: 'font-awesome';
+            src: url("../report-service/fonts/FontAwesome.otf") format("opentype");
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo100-Regular.otf") format("opentype");
+            font-weight: 100;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo300-Regular.otf") format("opentype");
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo300-Regular.otf") format("opentype");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo500-Regular.otf") format("opentype");
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo700-Regular.otf") format("opentype");
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo900-Regular.otf") format("opentype");
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo100-Italic.otf") format("opentype");
+            font-weight: 100;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo300-Italic.otf") format("opentype");
+            font-weight: 300;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo300-Italic.otf") format("opentype");
+            font-weight: normal;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo500-Italic.otf") format("opentype");
+            font-weight: 500;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo700-Italic.otf") format("opentype");
+            font-weight: 700;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo';
+            src: url("../report-service/fonts/Museo/Fonts/Museo900-Italic.otf") format("opentype");
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans100-Regular.otf") format("opentype");
+            font-weight: 100;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans300-Regular.otf") format("opentype");
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans300-Regular.otf") format("opentype");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans500-Regular.otf") format("opentype");
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans700-Regular.otf") format("opentype");
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans900-Regular.otf") format("opentype");
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans100-Italic.otf") format("opentype");
+            font-weight: 100;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans300-Italic.otf") format("opentype");
+            font-weight: 300;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans300-Italic.otf") format("opentype");
+            font-weight: normal;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans500-Italic.otf") format("opentype");
+            font-weight: 500;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans700-Italic.otf") format("opentype");
+            font-weight: 700;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'museo-sans';
+            src: url("../report-service/fonts/MuseoSans/Fonts/MuseoSans900-Italic.otf") format("opentype");
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active{outline:0}a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}@media print{*,*:before,*:after{text-shadow:none !important;box-shadow:none !important}a,a:visited{text-decoration:underline}abbr[title]:after{content:" (" attr(title) ")"}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.btn>.caret,.dropup>.btn>.caret{border-top-color:#000 !important}.label{border:1px solid #000}.table{border-collapse:collapse !important}.table td,.table th{background-color:#fff !important}.table-bordered th,.table-bordered td{border:1px solid #ddd !important}}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}@-moz-viewport{width:device-width}@-ms-viewport{width:device-width}@-o-viewport{width:device-width}@-webkit-viewport{width:device-width}@viewport{width:device-width}html{font-size:16px;-webkit-tap-highlight-color:transparent}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#373a3c;background-color:#fff}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[title],abbr[data-original-title]{cursor:help;border-bottom:1px dotted #818a91}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul,dl{margin-top:0;margin-bottom:1rem}ol ol,ul ul,ol ul,ul ol{margin-bottom:0}dt{font-weight:bold}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}a{color:#0275d8;text-decoration:none}a:focus,a:hover{color:#014c8c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}pre{margin-top:0;margin-bottom:1rem}figure{margin:0 0 1rem}img{vertical-align:middle}[role="button"]{cursor:pointer}table{background-color:transparent}caption{padding-top:.75rem;padding-bottom:.75rem;color:#818a91;text-align:left;caption-side:bottom}th{text-align:left}label{display:inline-block;margin-bottom:.5rem}input,button,select,textarea{margin:0;line-height:inherit}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit}input[type="search"]{-webkit-appearance:none}output{display:inline-block}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,.h1,h2,.h2,h3,.h3{margin-bottom:.5rem}h4,.h4,h5,.h5,h6,.h6{margin-bottom:.5rem}h1,.h1{font-size:2.5rem}h2,.h2{font-size:2rem}h3,.h3{font-size:1.75rem}h4,.h4{font-size:1.5rem}h5,.h5{font-size:1.25rem}h6,.h6{font-size:1rem}.lead{font-size:1.25rem;font-weight:300}.display-1{font-size:3.5rem;font-weight:300}.display-2{font-size:4.5rem;font-weight:300}.display-3{font-size:5.5rem;font-weight:300}.display-4{font-size:6rem;font-weight:300}hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:.0625rem solid rgba(0,0,0,0.1)}small,.small{font-size:80%;font-weight:normal}mark,.mark{padding:.2em;background-color:#fcf8e3}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;margin-left:-5px;list-style:none}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}.dl-horizontal{margin-right:-1.875rem;margin-left:-1.875rem}.dl-horizontal:before,.dl-horizontal:after{content:" ";display:table}.dl-horizontal:after{clear:both}.initialism{font-size:90%;text-transform:uppercase}.blockquote{padding:.5rem 1rem;margin-bottom:1rem;font-size:1.25rem;border-left:0.25rem solid #eceeef}.blockquote p:last-child,.blockquote ul:last-child,.blockquote ol:last-child{margin-bottom:0}.blockquote footer{display:block;font-size:80%;line-height:1.5;color:#818a91}.blockquote footer:before{content:"\2014 \00A0"}.blockquote-reverse{padding-right:1rem;padding-left:0;text-align:right;border-right:0.25rem solid #eceeef;border-left:0}.blockquote-reverse footer:before{content:""}.blockquote-reverse footer:after{content:"\00A0 \2014"}.figure{display:inline-block}.figure>img{line-height:1;margin-bottom:.5rem}.figure-caption{font-size:90%;color:#818a91}.img-responsive,.figure>img{display:block;max-width:100%;height:auto}.img-rounded{border-radius:.3rem}.img-thumbnail{padding:.25rem;line-height:1.5;background-color:#fff;border:1px solid #ddd;border-radius:.25rem;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:.2rem .4rem;font-size:90%;color:#bd4147;background-color:#f7f7f9;border-radius:.25rem}kbd{padding:.2rem .4rem;font-size:90%;color:#fff;background-color:#333;border-radius:.2rem}kbd kbd{padding:0;font-size:100%;font-weight:bold}pre{display:block;margin-top:0;margin-bottom:1rem;font-size:90%;line-height:1.5;color:#373a3c}pre code{padding:0;font-size:inherit;color:inherit;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}.container{margin-right:auto;margin-left:auto;padding-left:.9375rem;padding-right:.9375rem}.container:before,.container:after{content:" ";display:table}.container:after{clear:both}@media (min-width: 34em){.container{max-width:34rem}}@media (min-width: 48em){.container{max-width:45rem}}@media (min-width: 62em){.container{max-width:60rem}}@media (min-width: 75em){.container{max-width:72.25rem}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:.9375rem;padding-right:.9375rem}.container-fluid:before,.container-fluid:after{content:" ";display:table}.container-fluid:after{clear:both}.row{margin-left:-.9375rem;margin-right:-.9375rem}.row:before,.row:after{content:" ";display:table}.row:after{clear:both}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12{position:relative;min-height:1px;padding-left:.9375rem;padding-right:.9375rem}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-1{width:8.33333%}.col-xs-2{width:16.66667%}.col-xs-3{width:25%}.col-xs-4{width:33.33333%}.col-xs-5{width:41.66667%}.col-xs-6{width:50%}.col-xs-7{width:58.33333%}.col-xs-8{width:66.66667%}.col-xs-9{width:75%}.col-xs-10{width:83.33333%}.col-xs-11{width:91.66667%}.col-xs-12{width:100%}.col-xs-pull-0{right:auto}.col-xs-pull-1{right:8.33333%}.col-xs-pull-2{right:16.66667%}.col-xs-pull-3{right:25%}.col-xs-pull-4{right:33.33333%}.col-xs-pull-5{right:41.66667%}.col-xs-pull-6{right:50%}.col-xs-pull-7{right:58.33333%}.col-xs-pull-8{right:66.66667%}.col-xs-pull-9{right:75%}.col-xs-pull-10{right:83.33333%}.col-xs-pull-11{right:91.66667%}.col-xs-pull-12{right:100%}.col-xs-push-0{left:auto}.col-xs-push-1{left:8.33333%}.col-xs-push-2{left:16.66667%}.col-xs-push-3{left:25%}.col-xs-push-4{left:33.33333%}.col-xs-push-5{left:41.66667%}.col-xs-push-6{left:50%}.col-xs-push-7{left:58.33333%}.col-xs-push-8{left:66.66667%}.col-xs-push-9{left:75%}.col-xs-push-10{left:83.33333%}.col-xs-push-11{left:91.66667%}.col-xs-push-12{left:100%}.col-xs-offset-0{margin-left:0%}.col-xs-offset-1{margin-left:8.33333%}.col-xs-offset-2{margin-left:16.66667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333%}.col-xs-offset-5{margin-left:41.66667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333%}.col-xs-offset-8{margin-left:66.66667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333%}.col-xs-offset-11{margin-left:91.66667%}.col-xs-offset-12{margin-left:100%}@media (min-width: 34em){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-1{width:8.33333%}.col-sm-2{width:16.66667%}.col-sm-3{width:25%}.col-sm-4{width:33.33333%}.col-sm-5{width:41.66667%}.col-sm-6{width:50%}.col-sm-7{width:58.33333%}.col-sm-8{width:66.66667%}.col-sm-9{width:75%}.col-sm-10{width:83.33333%}.col-sm-11{width:91.66667%}.col-sm-12{width:100%}.col-sm-pull-0{right:auto}.col-sm-pull-1{right:8.33333%}.col-sm-pull-2{right:16.66667%}.col-sm-pull-3{right:25%}.col-sm-pull-4{right:33.33333%}.col-sm-pull-5{right:41.66667%}.col-sm-pull-6{right:50%}.col-sm-pull-7{right:58.33333%}.col-sm-pull-8{right:66.66667%}.col-sm-pull-9{right:75%}.col-sm-pull-10{right:83.33333%}.col-sm-pull-11{right:91.66667%}.col-sm-pull-12{right:100%}.col-sm-push-0{left:auto}.col-sm-push-1{left:8.33333%}.col-sm-push-2{left:16.66667%}.col-sm-push-3{left:25%}.col-sm-push-4{left:33.33333%}.col-sm-push-5{left:41.66667%}.col-sm-push-6{left:50%}.col-sm-push-7{left:58.33333%}.col-sm-push-8{left:66.66667%}.col-sm-push-9{left:75%}.col-sm-push-10{left:83.33333%}.col-sm-push-11{left:91.66667%}.col-sm-push-12{left:100%}.col-sm-offset-0{margin-left:0%}.col-sm-offset-1{margin-left:8.33333%}.col-sm-offset-2{margin-left:16.66667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333%}.col-sm-offset-5{margin-left:41.66667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333%}.col-sm-offset-8{margin-left:66.66667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333%}.col-sm-offset-11{margin-left:91.66667%}.col-sm-offset-12{margin-left:100%}}@media (min-width: 48em){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-1{width:8.33333%}.col-md-2{width:16.66667%}.col-md-3{width:25%}.col-md-4{width:33.33333%}.col-md-5{width:41.66667%}.col-md-6{width:50%}.col-md-7{width:58.33333%}.col-md-8{width:66.66667%}.col-md-9{width:75%}.col-md-10{width:83.33333%}.col-md-11{width:91.66667%}.col-md-12{width:100%}.col-md-pull-0{right:auto}.col-md-pull-1{right:8.33333%}.col-md-pull-2{right:16.66667%}.col-md-pull-3{right:25%}.col-md-pull-4{right:33.33333%}.col-md-pull-5{right:41.66667%}.col-md-pull-6{right:50%}.col-md-pull-7{right:58.33333%}.col-md-pull-8{right:66.66667%}.col-md-pull-9{right:75%}.col-md-pull-10{right:83.33333%}.col-md-pull-11{right:91.66667%}.col-md-pull-12{right:100%}.col-md-push-0{left:auto}.col-md-push-1{left:8.33333%}.col-md-push-2{left:16.66667%}.col-md-push-3{left:25%}.col-md-push-4{left:33.33333%}.col-md-push-5{left:41.66667%}.col-md-push-6{left:50%}.col-md-push-7{left:58.33333%}.col-md-push-8{left:66.66667%}.col-md-push-9{left:75%}.col-md-push-10{left:83.33333%}.col-md-push-11{left:91.66667%}.col-md-push-12{left:100%}.col-md-offset-0{margin-left:0%}.col-md-offset-1{margin-left:8.33333%}.col-md-offset-2{margin-left:16.66667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333%}.col-md-offset-5{margin-left:41.66667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333%}.col-md-offset-8{margin-left:66.66667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333%}.col-md-offset-11{margin-left:91.66667%}.col-md-offset-12{margin-left:100%}}@media (min-width: 62em){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-1{width:8.33333%}.col-lg-2{width:16.66667%}.col-lg-3{width:25%}.col-lg-4{width:33.33333%}.col-lg-5{width:41.66667%}.col-lg-6{width:50%}.col-lg-7{width:58.33333%}.col-lg-8{width:66.66667%}.col-lg-9{width:75%}.col-lg-10{width:83.33333%}.col-lg-11{width:91.66667%}.col-lg-12{width:100%}.col-lg-pull-0{right:auto}.col-lg-pull-1{right:8.33333%}.col-lg-pull-2{right:16.66667%}.col-lg-pull-3{right:25%}.col-lg-pull-4{right:33.33333%}.col-lg-pull-5{right:41.66667%}.col-lg-pull-6{right:50%}.col-lg-pull-7{right:58.33333%}.col-lg-pull-8{right:66.66667%}.col-lg-pull-9{right:75%}.col-lg-pull-10{right:83.33333%}.col-lg-pull-11{right:91.66667%}.col-lg-pull-12{right:100%}.col-lg-push-0{left:auto}.col-lg-push-1{left:8.33333%}.col-lg-push-2{left:16.66667%}.col-lg-push-3{left:25%}.col-lg-push-4{left:33.33333%}.col-lg-push-5{left:41.66667%}.col-lg-push-6{left:50%}.col-lg-push-7{left:58.33333%}.col-lg-push-8{left:66.66667%}.col-lg-push-9{left:75%}.col-lg-push-10{left:83.33333%}.col-lg-push-11{left:91.66667%}.col-lg-push-12{left:100%}.col-lg-offset-0{margin-left:0%}.col-lg-offset-1{margin-left:8.33333%}.col-lg-offset-2{margin-left:16.66667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333%}.col-lg-offset-5{margin-left:41.66667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333%}.col-lg-offset-8{margin-left:66.66667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333%}.col-lg-offset-11{margin-left:91.66667%}.col-lg-offset-12{margin-left:100%}}@media (min-width: 75em){.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12{float:left}.col-xl-1{width:8.33333%}.col-xl-2{width:16.66667%}.col-xl-3{width:25%}.col-xl-4{width:33.33333%}.col-xl-5{width:41.66667%}.col-xl-6{width:50%}.col-xl-7{width:58.33333%}.col-xl-8{width:66.66667%}.col-xl-9{width:75%}.col-xl-10{width:83.33333%}.col-xl-11{width:91.66667%}.col-xl-12{width:100%}.col-xl-pull-0{right:auto}.col-xl-pull-1{right:8.33333%}.col-xl-pull-2{right:16.66667%}.col-xl-pull-3{right:25%}.col-xl-pull-4{right:33.33333%}.col-xl-pull-5{right:41.66667%}.col-xl-pull-6{right:50%}.col-xl-pull-7{right:58.33333%}.col-xl-pull-8{right:66.66667%}.col-xl-pull-9{right:75%}.col-xl-pull-10{right:83.33333%}.col-xl-pull-11{right:91.66667%}.col-xl-pull-12{right:100%}.col-xl-push-0{left:auto}.col-xl-push-1{left:8.33333%}.col-xl-push-2{left:16.66667%}.col-xl-push-3{left:25%}.col-xl-push-4{left:33.33333%}.col-xl-push-5{left:41.66667%}.col-xl-push-6{left:50%}.col-xl-push-7{left:58.33333%}.col-xl-push-8{left:66.66667%}.col-xl-push-9{left:75%}.col-xl-push-10{left:83.33333%}.col-xl-push-11{left:91.66667%}.col-xl-push-12{left:100%}.col-xl-offset-0{margin-left:0%}.col-xl-offset-1{margin-left:8.33333%}.col-xl-offset-2{margin-left:16.66667%}.col-xl-offset-3{margin-left:25%}.col-xl-offset-4{margin-left:33.33333%}.col-xl-offset-5{margin-left:41.66667%}.col-xl-offset-6{margin-left:50%}.col-xl-offset-7{margin-left:58.33333%}.col-xl-offset-8{margin-left:66.66667%}.col-xl-offset-9{margin-left:75%}.col-xl-offset-10{margin-left:83.33333%}.col-xl-offset-11{margin-left:91.66667%}.col-xl-offset-12{margin-left:100%}}.table{width:100%;max-width:100%;margin-bottom:1rem}.table th,.table td{padding:.75rem;line-height:1.5;vertical-align:top;border-top:1px solid #eceeef}.table thead th{vertical-align:bottom;border-bottom:2px solid #eceeef}.table tbody+tbody{border-top:2px solid #eceeef}.table .table{background-color:#fff}.table-sm th,.table-sm td{padding:.3rem}.table-bordered{border:1px solid #eceeef}.table-bordered th,.table-bordered td{border:1px solid #eceeef}.table-bordered thead th,.table-bordered thead td{border-bottom-width:2px}.table-striped tbody tr:nth-of-type(odd){background-color:#f9f9f9}.table-hover tbody tr:hover{background-color:#f5f5f5}.table-active,.table-active>th,.table-active>td{background-color:#f5f5f5}.table-hover .table-active:hover{background-color:#e8e8e8}.table-hover .table-active:hover>td,.table-hover .table-active:hover>th{background-color:#e8e8e8}.table-success,.table-success>th,.table-success>td{background-color:#dff0d8}.table-hover .table-success:hover{background-color:#d0e9c6}.table-hover .table-success:hover>td,.table-hover .table-success:hover>th{background-color:#d0e9c6}.table-info,.table-info>th,.table-info>td{background-color:#d9edf7}.table-hover .table-info:hover{background-color:#c4e3f3}.table-hover .table-info:hover>td,.table-hover .table-info:hover>th{background-color:#c4e3f3}.table-warning,.table-warning>th,.table-warning>td{background-color:#fcf8e3}.table-hover .table-warning:hover{background-color:#faf2cc}.table-hover .table-warning:hover>td,.table-hover .table-warning:hover>th{background-color:#faf2cc}.table-danger,.table-danger>th,.table-danger>td{background-color:#f2dede}.table-hover .table-danger:hover{background-color:#ebcccc}.table-hover .table-danger:hover>td,.table-hover .table-danger:hover>th{background-color:#ebcccc}.table-responsive{display:block;width:100%;overflow-x:auto}.thead-inverse th{color:#fff;background-color:#373a3c}.thead-default th{color:#55595c;background-color:#eceeef}.table-inverse{color:#eceeef;background-color:#373a3c}.table-inverse.table-bordered{border:0}.table-inverse th,.table-inverse td,.table-inverse thead th{border-color:#55595c}.table-reflow thead{float:left}.table-reflow tbody{display:block;white-space:nowrap}.table-reflow th,.table-reflow td{border-top:1px solid #eceeef;border-left:1px solid #eceeef}.table-reflow th:last-child,.table-reflow td:last-child{border-right:1px solid #eceeef}.table-reflow thead:last-child tr:last-child th,.table-reflow thead:last-child tr:last-child td,.table-reflow tbody:last-child tr:last-child th,.table-reflow tbody:last-child tr:last-child td,.table-reflow tfoot:last-child tr:last-child th,.table-reflow tfoot:last-child tr:last-child td{border-bottom:1px solid #eceeef}.table-reflow tr{float:left}.table-reflow tr th,.table-reflow tr td{display:block !important;border:1px solid #eceeef}html{zoom:.75}body>section,.report-content{margin-left:2cm !important;margin-right:2cm !important}body>.report-content>section{margin-bottom:1cm}.pdf-report{font-family:"museo-sans",sans-serif;line-height:12pt;font-size:10pt;font-weight:500}.pdf-report h1,.pdf-report h2,.pdf-report h3{font-family:"museo",sans-serif}.pdf-report h1{font-size:28pt}.pdf-report h2{color:#f5821f;font-weight:700;font-size:18pt;line-height:20pt}.pdf-report h3{font-size:18pt;line-height:18pt;font-weight:500;margin-bottom:.8rem}.pdf-report h4{color:#000;font-weight:600;font-size:11pt;line-height:15pt;margin-bottom:0;font-family:"museo",sans-serif}.pdf-report h5{font-size:9pt;margin:.3cm 0 .05cm;color:#000;font-weight:600}.pdf-report p{font-size:9pt;font-family:"museo-sans",sans-serif}.pdf-report ul{margin:0 0 0 .5cm;padding-left:0;list-style:none;position:relative}.pdf-report ul li{line-height:12pt;margin:5px 0}.pdf-report ul li::before{position:absolute;content:'\02022';left:-.35cm;color:#f5821f}.pdf-report ol li{font-size:9pt}.pdf-report p+ul{margin-top:-10pt}.pdf-report .left{float:left}.pdf-report .right{float:right}.pdf-report .report-content{margin-right:auto;margin-left:auto;padding-left:5pt;padding-right:5pt;page-break-before:always}.pdf-report .report-content:before,.pdf-report .report-content:after{content:" ";display:table}.pdf-report .report-content:after{clear:both}.pdf-report .attachment{margin-right:auto;margin-left:auto;padding-left:5pt;padding-right:5pt;page-break-before:always}.pdf-report .attachment:before,.pdf-report .attachment:after{content:" ";display:table}.pdf-report .attachment:after{clear:both}.pdf-report .development-advice,.pdf-report .selection-advice,.pdf-report .strong-points,.pdf-report .points-of-attention,.pdf-report .signature{margin-left:-5pt;margin-right:-5pt;margin-top:.4cm;page-break-inside:avoid}.pdf-report .development-advice:before,.pdf-report .development-advice:after,.pdf-report .selection-advice:before,.pdf-report .selection-advice:after,.pdf-report .strong-points:before,.pdf-report .strong-points:after,.pdf-report .points-of-attention:before,.pdf-report .points-of-attention:after,.pdf-report .signature:before,.pdf-report .signature:after{content:" ";display:table}.pdf-report .development-advice:after,.pdf-report .selection-advice:after,.pdf-report .strong-points:after,.pdf-report .points-of-attention:after,.pdf-report .signature:after{clear:both}.pdf-report .development-advice ul li,.pdf-report .selection-advice ul li,.pdf-report .strong-points ul li,.pdf-report .points-of-attention ul li,.pdf-report .signature ul li{font-size:9pt}.pdf-report .align-with-listing-text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%}.pdf-report .listing{margin-top:.4cm;page-break-after:auto}.pdf-report .listing-header{margin-left:-5pt;margin-right:-5pt}.pdf-report .listing-header:before,.pdf-report .listing-header:after{content:" ";display:table}.pdf-report .listing-header:after{clear:both}.pdf-report .listing-title{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%}.pdf-report .listing-bar_heading{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:50%;width:41.66667%}.pdf-report .listing-bar_heading small{color:#7b6959;margin-bottom:-2pt;font-size:8pt}.pdf-report .listing_row{margin-left:-5pt;margin-right:-5pt;border-top:solid 1.75pt #eee;page-break-inside:avoid;page-break-after:auto;margin-top:7pt;padding-top:10pt;padding-bottom:2pt}.pdf-report .listing_row:before,.pdf-report .listing_row:after{content:" ";display:table}.pdf-report .listing_row:after{clear:both}.pdf-report .listing_row.listing_row__without-marker .listing_row-title__wrapper{width:50%}.pdf-report .listing_row.listing_row__without-marker .listing_row-marker{display:none}.pdf-report .listing_row-title{line-height:normal}.pdf-report .listing_row-title__wrapper{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:41.66667%}.pdf-report .listing_row-title_grade{color:#7bbcd8;float:right;font-size:9pt;font-weight:500;display:inline-block;margin-top:5pt}.pdf-report .listing_row-marker{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:8.33333%}.pdf-report .listing_row-marker__block{display:block;width:1.2cm;height:1.2cm;background-color:#7bbcd8;text-align:center;float:right}.pdf-report .listing_row-marker_icon-text{line-height:1.2cm;font-weight:bold;color:#fff;font-size:14pt}.pdf-report .listing_row-body{clear:both;font-size:8pt;margin-top:5pt}.pdf-report .listing_row-body::before,.pdf-report .listing_row-body::after{content:' ';display:table}.pdf-report .listing_row-bar{float:left;width:82.5%}.pdf-report .listing_row-bar__wrapper{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:50%}.pdf-report .listing_row-score{float:left;width:17.5%;text-align:right;font-weight:600;clear:right;font-size:14pt}.pdf-report .intellectual-capabilities .listing_row-marker__block,.pdf-report .power-to-change .listing_row-marker__block{background-color:#f5821f}.pdf-report .power-to-change,.pdf-report .intellectual-capabilities{page-break-inside:avoid}.pdf-report .score-attachment-widget_score-bar{width:100%;height:14pt;margin:1pt 0 0;padding:0}.pdf-report .attachment .listing_row-body,.pdf-report .attachment .listing_row-title_grade{margin-top:0 !important}.pdf-report .attachment .listing_row-body li{line-height:12.5pt !important}.pdf-report .attachment-title{color:#7bbcd8}.pdf-report .attachment-subtitle{color:#000;display:block}.pdf-report .attachment_introduction{margin-left:-5pt;margin-right:-5pt}.pdf-report .attachment_introduction:before,.pdf-report .attachment_introduction:after{content:" ";display:table}.pdf-report .attachment_introduction:after{clear:both}.pdf-report .attachment_introduction-icon{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:8.33333%}.pdf-report .attachment_introduction-icon__marker{background-color:#7bbcd8;width:1.2cm;height:1.2cm;line-height:1.2cm;text-align:center;float:right}.pdf-report .attachment_introduction-icon__marker::before{content:'\f0c6';font-family:font-awesome;font-size:16pt;color:#fff}.pdf-report .attachment_introduction h4{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%}.pdf-report .attachment_introduction-text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%;padding:0}.cover{width:100%;height:99.9%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTk1LjNweCIgaGVpZ2h0PSI4NDEuOXB4IiB2aWV3Qm94PSIwIDAgNTk1LjMgODQxLjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU5NS4zIDg0MS45OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2NsaXAtcGF0aDp1cmwoI1NWR0lEXzFfKTt9LnN0MXtmaWxsOiNFREVDRTg7fS5zdDJ7ZmlsbDojN0Q2QTVCO30uc3Qze2ZpbGw6I0Y4QjkxNzt9LnN0NHtmaWxsOiM5M0MzREQ7fS5zdDV7ZmlsbDojOUVDQkNCO30uc3Q2e2ZpbGw6I0JGMjMyODt9LnN0N3tmaWxsOiNFQzdEMjQ7fTwvc3R5bGU+PGcgaWQ9IlhNTElEXzJfIj48ZGVmcz48cmVjdCBpZD0iU1ZHSURfM18iIHg9IjAiIHk9IjIzMS44IiB3aWR0aD0iNTk1LjMiIGhlaWdodD0iNDc2LjIiLz48L2RlZnM+PGNsaXBQYXRoIGlkPSJTVkdJRF8xXyI+PHVzZSB4bGluazpocmVmPSIjU1ZHSURfM18iICBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTsiLz48L2NsaXBQYXRoPjxnIGlkPSJYTUxJRF8zXyIgY2xhc3M9InN0MCI+PHJlY3QgaWQ9IlhNTElEXzE1XyIgeD0iMCIgeT0iLTUwLjIiIGNsYXNzPSJzdDEiIHdpZHRoPSI1OTUuMyIgaGVpZ2h0PSI4NDEuOSIvPjxnIGlkPSJYTUxJRF80XyI+PHBhdGggaWQ9IlhNTElEXzE0XyIgY2xhc3M9InN0MiIgZD0iTTU4OS43LDQ2OS40Yy0zMS44LDI5LjQtNTkuNSw2Mi45LTgyLjUsOTkuNmMtMjMuNywzNy43LTQyLjUsNzguMy01NiwxMjAuN2MtOC44LDI3LjYtMTUuMyw1NS45LTE5LjYsODQuNmMyLjktNy4xLDUuOC0xNC4zLDkuMS0yMS41YzE3LTM3LjMsMzcuNi03Mi44LDYxLjUtMTA2LjFjMjQuOC0zNC41LDUyLjYtNjYsODMuMi05M2MyOS43LTI2LjQsNjIuNy00OC45LDk4LTY3LjFjNjguOC0zNS41LDE0MS44LTUxLjIsMjA1LjktNTcuMnMxMTkuNC0zLjQsMTU4LjUtMmMzOS4yLDEuNiw2Mi41LDIuMSw2NS4xLTUuNGMyLjYtNy41LTE3LjItMjIuNi01Ni4yLTM3LjRjLTM4LjktMTQuNi05Ny4zLTI5LjItMTY5LjktMzAuOGMtMzkuNC0wLjktNzguNywyLjUtMTE3LjMsMTBjLTExLjMsMi4zLTIyLjgsNC45LTM0LjMsOC4xQzY4MS42LDM5Ni4xLDYzMi40LDQyOSw1ODkuNyw0NjkuNEw1ODkuNyw0NjkuNHoiLz48cGF0aCBpZD0iWE1MSURfMTNfIiBjbGFzcz0ic3QyIiBkPSJNMzg4LjgsMTA3MS41Yy0xMi42LTI2LjMtMjMtNTMuNy0zMS04MS43YzQuMSwyMS40LDkuNyw0Mi40LDE2LjcsNjNjMjEuNyw2My41LDU1LjYsMTIyLjIsMTAyLjYsMTc5LjNjMjUsMzAuMiw1Mi40LDU4LjMsODEuOCw4NC4zYzE1LjUsMTMuOSwzMi4yLDI3LjUsNTAuMSw0MWMxOC41LDE0LjEsMzcuOCwyNy4yLDU3LjgsMzkuMmMtMTkuMy0xMi45LTM3LjgtMjctNTUuNC00Mi4xYy0xNy0xNC40LTMyLjctMjguOS00Ny4zLTQzLjZjLTI3LjMtMjcuMy01Mi4xLTU2LjktNzQuMy04OC40Yy03LjktMTEuMy0xNS4xLTIyLjYtMjItMzMuOWMtNy41LTguMS0xNS4yLTE3LjEtMjIuOS0yN0M0MjMsMTEzMy42LDQwNC4yLDExMDMuNSwzODguOCwxMDcxLjV6Ii8+PHBhdGggaWQ9IlhNTElEXzEyXyIgY2xhc3M9InN0MyIgZD0iTTE0LjksNjY3LjVjLTMxLjYtMy02Mi43LTEwLjMtOTIuMy0yMS44Yy0yMC41LTIuMi00MC43LTYtNjAuNi0xMS41Yy0yOS42LTguNC01OC4xLTIwLjMtODQuOS0zNS42Yy0zMS0xNy45LTU5LjUtNDAtODQuNi02NS41YzUxLjIsNTguNiwxMDguOCw5NC40LDE2NC40LDExNi4xYzUyLjQsMjAuMywxMDguNCwyOS45LDE2NC42LDI4YzMxLjEtMSw2Mi01LjUsOTIuMi0xMy4yYy0wLjUsMC4xLTAuOSwwLjItMS40LDAuM0M4MC4xLDY2OS41LDQ3LjQsNjcwLjYsMTQuOSw2NjcuNXoiLz48cGF0aCBpZD0iWE1MSURfMTFfIiBjbGFzcz0ic3QzIiBkPSJNMzI1LDQzMC43YzQyLjItNTQuMiw2My44LTEwOS4xLDczLjctMTYxLjdjOS4zLTUwLDguMi0xMDEuNC0zLjEtMTUxYy0zLjgtMTYuNi04LjgtMzIuOS0xNC43LTQ4LjhjLTI1LTQzLjUtNTQuNC03My45LTc3LjgtOTIuM2MtMjcuMS0yMS4xLTQ2LjQtMjcuNS01MS42LTIxLjdjLTUuNSw2LDMuNCwyMy4yLDE4LjYsNTAuNGMxNS4yLDI3LjEsMzYsNjQuOCw1MS42LDExMi4zYzE1LjcsNDcuMywyNS42LDEwNC41LDIxLjEsMTY1LjNjLTQuNiw2My44LTI0LjIsMTI1LjUtNTcuMSwxODAuM2MtNi4zLDEwLjMtMTMuMiwyMC4zLTIwLjUsMzBDMjg3LjEsNDc0LjYsMzA3LjIsNDUzLjUsMzI1LDQzMC43eiIvPjxwYXRoIGlkPSJYTUxJRF8xMF8iIGNsYXNzPSJzdDQiIGQ9Ik00MDcuNCwxMDQzLjRjMTEuNCw0OS4xLDMxLjMsOTcuMyw2MC4zLDE0NS4yYzEwLjMsMTEuMiwyMS4yLDIxLjksMzIuNywzMS44YzE3LDE0LjYsMzEuNywyNC40LDQyLjYsMjkuOXMxOC4xLDYuNywyMC44LDMuOGM1LjUtNi4xLTguMS0yNy4yLTMwLjMtNjIuNHMtNTIuMy04NS4zLTc1LTE0OS42Yy0xMi4yLTM0LjMtMjEuMS02OS44LTI2LjYtMTA1LjhjLTYtMzkuOS03LjYtODAuNC00LjgtMTIwLjZjMS0xMy44LDIuNi0yNy43LDQuNi00MS42Yy0xMC42LDI1LjktMTguOSw1Mi42LTI1LDc5LjlDMzkyLjMsOTIwLjEsMzkzLjUsOTgyLjYsNDA3LjQsMTA0My40eiIvPjxwYXRoIGlkPSJYTUxJRF85XyIgY2xhc3M9InN0NCIgZD0iTTk3NS44LDMyNy4yYzc3LjksNSwxNTMuNSwyOC4zLDIyMC44LDY3LjljNDEuMiwyNC4zLDc4LjksNTQsMTEyLjIsODguNGMtMzEuOC0zNi4xLTY4LjItNjcuOS0xMDguMS05NC44Yy02Ni44LTQ0LjctMTQyLjctNzQuMi0yMjIuMi04Ni4xYy0zNS43LTUuNC03MS44LTcuMi0xMDcuOC01LjZjLTcxLjQsMy41LTE0Mi43LDE5LjgtMjE1LjQsNTQuMWMtMzguNiwxOC40LTc1LjEsNDAuOS0xMDguOCw2Ny4yQzUwNyw0NDguNiw0NzIsNDg0LjIsNDQyLjIsNTI0Yy0zMS40LDQxLjgtNTYuMyw4OC4xLTczLjksMTM3LjRjLTMzLjIsOTMuMS00MC4yLDE5My41LTIwLjEsMjkwLjJjMi44LDEzLjEsNiwyNS45LDkuNiwzOC4yYy05LjMtNDcuNi0xMS4zLTk2LjMtNS45LTE0NC41YzQuNi0zOS44LDEzLjUtNzkuMSwyNi41LTExN2MxNC45LTQzLjQsMzQuMS04NS4yLDU3LjQtMTI0LjhjMjQuNi00Mi4xLDU0LjktODAuNiw5MC4xLTExNC40YzM0LjctMzMuMSw3NC4xLTYwLjksMTE3LTgyLjRjMjkuNC0xNC43LDYwLjItMjYuMyw5Mi0zNC45YzQ0LjEtMjAuMSw5MC44LTMzLjgsMTM4LjgtNDAuOEM5MDcuNSwzMjYuNCw5NDEuNywzMjUsOTc1LjgsMzI3LjJ6Ii8+PHBhdGggaWQ9IlhNTElEXzhfIiBjbGFzcz0ic3Q1IiBkPSJNNTI2LDQ4OS4yYy0zNS4yLDMzLjgtNjUuNSw3Mi4zLTkwLjIsMTE0LjRjLTIzLjMsMzkuNi00Mi41LDgxLjQtNTcuNCwxMjQuOGMtMTMsMzcuOS0yMS45LDc3LjItMjYuNSwxMTdjLTUuNCw0OC4yLTMuNCw5Ni45LDUuOSwxNDQuNWM4LDI4LjEsMTguNCw1NS40LDMxLDgxLjdjMTUuNCwzMiwzNC4xLDYyLjIsNTYsOTAuMmM3LjcsOS44LDE1LjQsMTguOCwyMi45LDI3Yy0yOS00Ny45LTQ4LjktOTYuMS02MC4zLTE0NS4yYy0xMy45LTYwLjgtMTUuMS0xMjMuMy0wLjgtMTg5LjNjNi4xLTI3LjMsMTQuNC01NCwyNS03OS45YzQuMi0yOC43LDEwLjgtNTcsMTkuNi04NC42YzEzLjUtNDIuNCwzMi4zLTgzLDU2LTEyMC43YzIzLTM2LjcsNTAuNy03MC4yLDgyLjUtOTkuNkM2MzIuNCw0MjksNjgxLjUsMzk2LjEsNzM1LDM3MmMtMzEuOCw4LjUtNjIuNiwyMC4yLTkyLDM0LjhDNjAwLjEsNDI4LjMsNTYwLjcsNDU2LjEsNTI2LDQ4OS4yeiIvPjxwYXRoIGlkPSJYTUxJRF83XyIgY2xhc3M9InN0NiIgZD0iTTE4LjQsNjQzYzQ5LjEtOCw5NS45LTI1LjEsMTQxLjQtNTMuNWMyNC0xNSw0Ni4zLTMyLjUsNjYuNi01Mi4zYzE0LTEzLjYsMjYuOS0yOC4zLDM4LjYtNDMuOWMtMjYuNCwyMi44LTU1LjcsNDIuMi04Nyw1Ny42Yy01NC42LDI2LjgtMTExLjQsMzguOC0xNjAuOSw0MWMtNDkuNywyLjUtOTIuMS00LTEyMi43LTguN2MtMzAuNi00LjctNDkuOC03LjQtNTMuNi0wLjNjLTMuNyw2LjgsOC44LDIyLjksMzgsNDEuMWMxMy45LDguNSwyOC41LDE1LjcsNDMuNywyMS41Qy00NS41LDY0OS0xMy4zLDY0OC4xLDE4LjQsNjQzeiIvPjxwYXRoIGlkPSJYTUxJRF82XyIgY2xhc3M9InN0NiIgZD0iTTQxNy44LDQyMy4zYzcuNi0xNi43LDE0LTMzLjgsMTkuMi01MS40YzkuNC0zMS41LDE1LTYzLjksMTYuOC05Ni43YzMtNjEuNS02LjgtMTE2LjMtMjUuMy0xNjcuMUM0MDkuMiw1NS40LDM3OS44LDYuOSwzNDEuOS0zNC41Yy00MC4zLTQ0LTk0LTg1LTE2Ni40LTExMy41QzI0Ni0xMTUuMSwyOTUuMy03MC4zLDMyOS43LTI0LjRjMjEuNCwyOC42LDM4LjYsNjAuMSw1MS4yLDkzLjVjMy41LDYuMiw3LDEyLjYsMTAuNCwxOS4zYzE0LjYsMjkuMSwyNS40LDU5LjksMzIuMiw5MS43YzcuNywzNS43LDEwLjUsNzIuMyw4LjQsMTA4LjhjLTIuMywzOS0xMC4yLDc3LjUtMjMuNiwxMTQuM2MtMTMuNywzNy44LTMzLjIsNzMuMy01Ny42LDEwNS4yYy0yMy4yLDMwLjItNTAuNSw1Ny4xLTgxLDgwYy0yNiwxOS43LTU0LjEsMzYuNS04My43LDUwLjFjLTIzLjMsMTAuNi00Ny41LDE5LjEtNzIuMywyNS41YzM1LjctNiw3MC4zLTE2LjksMTAzLTMyLjRjMzUuMy0xNi43LDY4LjEtMzguNCw5Ny4yLTY0LjVjMjkuOC0yNi43LDU1LjUtNTcuNiw3Ni40LTkxLjdDNDAwLjYsNDU4LjcsNDA5LjgsNDQxLjMsNDE3LjgsNDIzLjN6Ii8+PHBhdGggaWQ9IlhNTElEXzVfIiBjbGFzcz0ic3Q3IiBkPSJNMjY5LjgsNTg4LjRjMzAuNS0yMi45LDU3LjgtNDkuOCw4MS04MGMyNC41LTMxLjksNDMuOS02Ny40LDU3LjYtMTA1LjJjMTMuMy0zNi44LDIxLjItNzUuMywyMy41LTExNC4zYzIuMS0zNi41LTAuNy03My4xLTguNC0xMDguOGMtNi44LTMxLjgtMTcuNy02Mi42LTMyLjItOTEuN2MtMy40LTYuNy02LjktMTMuMS0xMC40LTE5LjNjNiwxNS45LDEwLjksMzIuMiwxNC43LDQ4LjhjMTEuMyw0OS42LDEyLjMsMTAxLDMuMSwxNTFjLTkuOCw1Mi42LTMxLjQsMTA3LjUtNzMuNywxNjEuOGMtMTcuOCwyMi45LTM3LjksNDMuOS01OS45LDYyLjdjLTExLjcsMTUuNi0yNC42LDMwLjMtMzguNiw0My45Yy0yMC4zLDE5LjctNDIuNiwzNy4yLTY2LjYsNTIuM0MxMTQuMyw2MTcuOSw2Ny41LDYzNSwxOC40LDY0M2MtMzEuNyw1LjEtNjQsNi05NS45LDIuN2MyOS42LDExLjUsNjAuNywxOC45LDkyLjMsMjEuOGMzMi41LDMuMSw2NS4yLDIsOTcuNC0zLjRjMC41LDAsMC45LTAuMiwxLjQtMC4zYzI0LjgtNi40LDQ5LTE0LjksNzIuMy0yNS41QzIxNS43LDYyNC45LDI0My44LDYwOC4xLDI2OS44LDU4OC40eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==);background-size:cover}.cover .cover-text{margin-right:auto;margin-left:auto;padding-left:5pt;padding-right:5pt;height:10cm;margin-left:2cm !important;margin-right:2cm !important;font-size:8pt}.cover .cover-text:before,.cover .cover-text:after{content:" ";display:table}.cover .cover-text:after{clear:both}.cover .cover-text .cover-text_organisation-information,.cover .cover-text .cover-text_participant-information{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:83.33333%}.cover .cover-text .organisation-information_image{display:none}.cover .cover-text .cover-text_participant-information{margin-top:4cm}.cover .cover-text .cover-text_participant-information h2{color:#000;margin-bottom:0}.report-content .introduction{margin-right:auto;margin-left:auto;padding-left:5pt;padding-right:5pt}.report-content .introduction:before,.report-content .introduction:after{content:" ";display:table}.report-content .introduction:after{clear:both}.report-content .introduction .introduction-wrapper{margin-left:-5pt;margin-right:-5pt;page-break-inside:avoid;page-break-after:auto}.report-content .introduction .introduction-wrapper:before,.report-content .introduction .introduction-wrapper:after{content:" ";display:table}.report-content .introduction .introduction-wrapper:after{clear:both}.report-content .introduction_text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:58.33333%}.report-content .introduction_text p:last-child{border-top:solid 1.75pt #eee;padding-top:.5cm}.report-content .introduction_text h2{margin-bottom:.5cm}.report-content .introduction_text h4{margin-top:.5cm}.report-content .introduction .participant-details{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:25%;display:inline-block;margin-left:.75cm}.report-content .introduction .participant-details_text span{font-weight:500;display:block;padding-bottom:0}.report-content .introduction .participant-details_text span:not(:first-child){margin-bottom:10pt}.report-content .introduction .participant-details_text span.small{font-size:8pt;margin-bottom:0}.report-content .introduction section li{font-size:9pt}.report-content .introduction .introduction_left,.report-content .introduction .introduction_full{page-break-inside:avoid}.selection-advice__marker{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:8.33333%}.selection-advice__text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%}.selection-advice__text h3{font-family:"museo-sans",sans-serif}.selection-advice__marker__block{font-family:'font-awesome';font-size:20pt;color:#fff;line-height:1.2cm;text-align:center;width:1.2cm;height:1.2cm;position:absolute;right:.2cm}.selection-advice__marker__block-positive{background-color:#57b947}.selection-advice__marker__block-positive::before{content:'\f00c'}.selection-advice__marker__block-tentative{background-color:#8eb27d}.selection-advice__marker__block-tentative::before{content:'\f141'}.selection-advice__marker__block-negative{background-color:#9c9693}.selection-advice__marker__block-negative::before{content:'\f00d'}.development-advice__text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%;display:inline-block}.development-advice__text h3{font-family:"museo-sans",sans-serif}.development-advice ul li{font-size:9pt}.consultant__name{font-family:"museo",sans-serif;font-weight:700;font-size:15pt;line-height:20pt;margin-top:1cm;display:block}.consultant__function-title{font-weight:300;font-size:9pt;margin-top:.2cm;display:block}.report-content .research-question{margin-left:-5pt;margin-right:-5pt;page-break-inside:avoid;page-break-after:auto}.report-content .research-question:before,.report-content .research-question:after{content:" ";display:table}.report-content .research-question:after{clear:both}.report-content .research-question .research-question_text{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;margin-left:8.33333%;width:91.66667%}.report-content .research-question .research-question_text li{font-size:11pt;font-weight:700;margin-left:.5cm;margin-bottom:.2cm}.report-content .research-question .research-question_text li::before{color:#f5821f;content:'\f059';font-family:'font-awesome';margin-bottom:1mm}.report-content .research-question .research-question_text li:first-child{margin-top:.5cm}.scorebar-attachment__blankstyle{fill:#edece8}.scorebar-attachment__activestyle{fill:#90c2dd}.bar-attachment-widget.bar-attachment-widget__singular .scorebar-attachment__activestyle{fill:#edece8}.bar-attachment-widget.bar-attachment-widget__singular.bar-attachment-widget__score-1 #score-bar-element-1,.bar-attachment-widget.bar-attachment-widget__singular.bar-attachment-widget__score-2 #score-bar-element-2,.bar-attachment-widget.bar-attachment-widget__singular.bar-attachment-widget__score-3 #score-bar-element-3,.bar-attachment-widget.bar-attachment-widget__singular.bar-attachment-widget__score-4 #score-bar-element-4,.bar-attachment-widget.bar-attachment-widget__singular.bar-attachment-widget__score-5 #score-bar-element-5{fill:#90c2dd}.score-attachment-widget_score-explanation{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:100%;display:none}.score-attachment-widget_score-explanation header{margin-bottom:5px !important}@media (min-width: 62em){.score-attachment-widget_score-explanation{width:66.66667%}.score-attachment-widget_score-explanation header{margin-bottom:inherit !important}}.score-attachment-widget_score-explanation section{position:relative;float:left;min-height:1px;padding-left:5pt;padding-right:5pt;width:100%}@media (min-width: 48em){.score-attachment-widget_score-explanation section{width:50%}}.score-attachment-widget_score-explanation section ul{color:#7b6959}.score-attachment-widget_score-explanation.score-explanation__active{display:block}
+    </style>
+</head>
+<body class="pdf-report">
+<header class="cover">
+    <div class="cover-text">
+        <div class="cover-text_organisation-information">
+            <div class="organisation-information_image">
+                <!--<img alt="image" />-->
+                <br />
+            </div>
+            <div class="organisation-information_text">
+                <h4>LTP<br />
+                    <br />
+                    <span><!--Manager--></span>
+                </h4>
+            </div>
+        </div>
+        <div class="cover-text_participant-information">
+            <div class="participant-information_text">
+                <h2>Finn Baumgärtner</h2>
+                <h2>Selectierapport</h2>
+            </div>
+            <div class="participant-information_image">
+                <!--<img alt="image" />-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="report-content">
+    <section class="introduction">
+        <div class="introduction-wrapper">
+            <section class="introduction_text">
+                <h2>Introductie</h2>
+                <h4>Over dit rapport</h4>
+                <p>Deze rapportage is tot stand gekomen door een zorgvuldige integratie van de uitkomsten van alle assessmentonderdelen door de verantwoordelijke adviseur. De adviseur heeft op basis hiervan een persoonlijk rapport geschreven bestaande uit een advies, scores en een toelichting. Het rapport dient ter ondersteuning bij de besluitvorming over plaatsing en het verkrijgen van inzicht in de sterke punten en de ontwikkelpunten van de deelnemer..!!!.</p>
+                <h4>Validiteit</h4>
+                <p></p>
+                <h4>Onderdelen</h4>
+                <p>Het assessmentrapport is gebaseerd op de resultaten van de volgende onderdelen:</p><ul><li>Persoonlijkheidsvragenlijsten</li><li>Capaciteitentests</li><li>Interview</li><li>Interview 2</li><li>Interview 3</li></ul>
+                <h4>Opbouw van het rapport</h4>
+                <p>Onderstaande onderdelen zijn opgenomen in dit rapport:</p><ul><li>Vraagstelling</li><li>Veranderkracht</li><li>Selectieadvies</li><li>Kwaliteiten en aandachtspunten</li><li>Finesse</li></ul>
+                <p>De door de deelnemer ingevoerde gegevens worden met de grootste zorg verwerkt tot een zo nauwkeurig mogelijk overzicht van de kwaliteiten en competenties van de deelnemer. LTP is op geen enkele wijze aansprakelijk voor de beslissingen die op basis van dit rapport worden genomen en de gevolgen daarvan.</p>
+            </section>
+
+            <aside class="participant-details">
+                <figure class="participant-details_image"></figure>
+                <div class="participant-details_text">
+                    <span class="small">Deelnemer</span>
+                    <span>Finn Baumgärtner</span>
+                    <span class="small">Organisatie</span>
+                    <span>LTP</span>
+                    <span class="small">Assessmentdatum</span>
+                    <span>29-03-2019</span>
+                    <span class="small">Naam adviseur</span>
+                    <span>Frank van den Brink</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+</section>
+
+<main class="report-content">
+    <section class="research-question">
+        <div class="research-question_text">
+            <h2>Vraagstelling</h2>
+            <ul><li>Wat zijn sterke punten en aandachtspunten in het licht van de functie?</li><li>Is er voldoende kans van slagen in deze functie?</li></ul>
+        </div>
+    </section>
+    <section class="selection-advice">
+        <div class="selection-advice__marker">
+            <div class="selection-advice__marker__block selection-advice__marker__block-positive"></div>
+        </div>
+        <div class="selection-advice__text">
+            <h2>Selectieadvies</h2>
+            <h3>Positief</h3>
+            <p>Tekst</p><h4>Tekst</h4><h5>Tekst</h5><p><strong>Tekst</strong></p><p><em>Tekst</em></p><p><u>Tekst</u></p><ol><li>Tekst</li></ol><ul><li>Tekst</li></ul><p><br></p>
+        </div>
+    </section>
+    <section class="listing competencies">
+        <header class="listing-header">
+            <div class="listing-title">
+                <h2>Competentieprofiel</h2>
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row ">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">Autonomie</h4>
+                <div class="listing_row-body">Zelfstandig en onafhankelijk van anderen oordelen en handelen. Bovendien eigen verantwoordelijkheid nemen voor het weloverwogen afwijken van geldende regels en procedures.</div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-2 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                    <span class="listing_row-title_grade left">Ondergemiddeld</span>
+                </div>
+                <div class="listing_row-score">2</div>
+                <div class="listing_row-body"></div>
+            </section>
+
+        </section>
+        <section class="listing_row ">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">Machtsvertoon 1</h4>
+                <div class="listing_row-body">Definitie macht 1</div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body"></div>
+            </section>
+
+        </section>
+    </section>
+    <section class="listing intellectual-capabilities">
+        <header class="listing-header">
+            <div class="listing-title">
+                <h2>Intellectueel vermogen</h2>
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row ">
+            <div class="listing_row-marker"><div class="listing_row-marker__block"><span class="listing_row-marker_icon-text">IQ</span></div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">Hbo-niveau</h4>
+                <div class="listing_row-body">
+                    De score op intellectueel vermogen is afgezet tegen de relevante normgroep: het getoetste niveau.
+                    Het gaat hierbij om het gevraagde werk- en denkniveau voor de functie. Dit werk- en denkniveau hoeft niet per definitie overeen te komen met het opleidingsniveau.
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-2 ">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score">2</div>
+                <div class="listing_row-body"></div>
+            </section>
+
+        </section>
+    </section>
+    <section class="listing power-to-change">
+        <header class="listing-header">
+            <div class="listing-title">
+                <h2>Veranderkracht</h2>
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row ">
+            <div class="listing_row-marker"><div class="listing_row-marker__block"><span class="listing_row-marker_icon-text">VQ</span></div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">Totaal</h4>
+                <div class="listing_row-body">
+                    De score op veranderkracht geeft aan in hoeverre iemand beschikt over de houding en motivatie om bij veranderingen in het werk goed te (blijven) functioneren.
+                    Bepalend hierin zijn veerkracht, energie, zelfmanagement en ontwikkelgerichtheid.
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-5 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__activestyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score">5</div>
+                <div class="listing_row-body"></div>
+            </section>
+
+        </section>
+    </section>
+    <section class="strong-points">
+        <div class="align-with-listing-text">
+            <h2>Kwaliteiten en kansen</h2>
+            <ul><li>In gesprekken mag zij meer rust aanbrengen. Hoewel zij met inzet en op enthousiaste wijze de dialoog aangaat, kan zij nog wat gehaast en onrustig overkomen. Door meer rust aan te brengen creëert zij meer tijd om de nieuwe informatie te integreren en zal zij nog meer gewicht in schaal leggen als relatiebeheerder midden/ grootbedrijf.</li><li>Mevrouw Jakobs is actiegericht en houdt graag grip op zaken. Het is voor haar een uitdaging om in situaties van onverwachtse hectiek een stap naar achter te doen zodat zij vanuit een overstijgend perspectief de situatie kan benaderen en zich op hoofdlijnen kan blijven richten.</li></ul>
+        </div>
+    </section>
+
+    <section class="points-of-attention">
+        <div class="align-with-listing-text">
+            <h2>Aandachtspunten en risico&#039;s</h2>
+            <p>Voor haar verdere ontwikkeling raden wij mevrouw Jakobs aan om meer rust te creëren in haar manier van werken en in gesprekken. Hoewel haar actiegerichtheid voor haar spreekt kan zij haar impact nog verder versterken door vanuit een meer overstijgende aanpak te werk te gaan en afwegingen te maken. Wij raden haar het volgende aan:</p><ul><li>In gesprekken kan zij er alert op zijn dat zij ook weleens achterover leunt en stiltes laat vallen. Door minder snel te reageren en meer de rust te nemen om informatie verder te integreren zal haar impact verder toenemen.</li><li>Het regelmatig inplannen van momenten van reflectie in haar werk. Dit zal haar helpen in haar aanpak, zodat zij vaste momenten heeft waarin zij als relatiebeheerder midden/ grootbedrijf kan overstijgen wat er allemaal speelt en op hoofdlijnen kan blijven sturen.</li></ul><p>Gezien haar intellectueel vermogen, ambitie en zelfreflectie verwachten wij dat zij een verdere ontwikkeling op deze gebieden kan doormaken.</p>
+        </div>
+    </section>
+    <section class="signature">
+        <div class="align-with-listing-text">
+            <p>
+                <span class="consultant__name">Frank van den Brink</span>
+                <span class="consultant__function-title">Adviseur</span>
+            </p>
+        </div>
+    </section>
+</main>
+
+<section class="attachment">
+    <section class="attachment_introduction">
+        <div class="attachment_introduction-icon">
+            <div class="attachment_introduction-icon__marker"></div>
+        </div>
+        <h2 class="attachment-title">
+            Scores uit testen en vragenlijsten
+            <span class="attachment-subtitle">Intellectueel vermogen</span>
+        </h2>
+        <p class="attachment_introduction-text">
+
+            Hieronder staan de uitslagen van de afzonderlijke capaciteitentests vermeld. Houd er rekening
+            mee dat de algemene score die eerder in het rapport beschreven is, geen gemiddelde is van de
+            hieronder vermelde testen. Relaties tussen verschillende testen zorgen ervoor dat de algemene score
+            hoger of lager kan zijn dan de gemiddelde score.
+
+            Getoetst op:
+            hbo-niveau.
+        </p>
+    </section>
+
+    <section class="listing">
+        <header class="listing-header">
+            <div class="listing-title">
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Abstracte intelligentie     </h4>
+                <div class="listing_row-body">
+                    Deze score geeft een indicatie van de mate waarin iemand abstract kan denken, hoofd- van bijzaken
+                    weet te scheiden, snel tot de kern van een probleem weet door te dringen, boven een probleem kan
+                    gaan staan en zaken in een breder verband kan zien.
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 ">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">            </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Verbale intelligentie     </h4>
+                <div class="listing_row-body">
+                    Deze score verwijst naar het vermogen om logische relaties te leggen tussen taalkundig
+                    betekenisvolle woorden. Dit is bijvoorbeeld van belang voor het begrijpen van ingewikkelde
+                    teksten.
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 ">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">            </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Numerieke intelligentie     </h4>
+                <div class="listing_row-body">
+                    Deze score verwijst naar de vaardigheid in het werken met en het interpreteren
+                    van getalsmatige informatie. Deze vaardigheid is bijvoorbeeld van belang bij functies waarin men
+                    zaken dient te onderbouwen met cijfers.
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 ">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">            </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+<section class="attachment">
+    <section class="attachment_introduction">
+        <div class="attachment_introduction-icon">
+            <div class="attachment_introduction-icon__marker"></div>
+        </div>
+        <h2 class="attachment-title">
+            Scores uit testen en vragenlijsten
+            <span class="attachment-subtitle">Persoonlijkheid</span>
+        </h2>
+        <p class="attachment_introduction-text">
+
+            Persoonlijkheidsfactoren zijn stabiele kenmerken van de persoon. Dat wil zeggen dat ze in de loop van de tijd niet of nauwelijks veranderen.
+            Persoonlijkheidsfactoren hebben een sterke invloed op het gedrag, iemands stijl en de vaardigheden die iemand in de loop van het leven ontwikkelt.
+            Talloze onderzoeken, wereldwijd uitgevoerd, hebben geleid tot het inzicht dat iemands persoonlijkheid het best kan worden getypeerd aan de hand van de volgende vijf stabiele persoonlijkheidsfactoren.
+
+        </p>
+    </section>
+
+    <section class="listing">
+        <header class="listing-header">
+            <div class="listing-title">
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Emotionele stabiliteit     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is sensitief, heeft oog en begrip voor de gevoelens van anderen. Kan zich goed inleven.</li>
+                        <li>Laat zich in gedrag leiden door gevoel.</li>
+                        <li>Is onder druk sfeer- of spanningsgevoelig, kan dan meer dan gemiddeld emotioneel reageren.</li>
+                        <li>Is alert bij mogelijke problemen, zal deze niet zo snel onderschatten.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is evenwichtig en gaat beheerst om met stressvolle situaties.</li>
+                        <li>Voelt zich zelfverzekerd en heeft het idee situaties onder controle te hebben.</li>
+                        <li>Kijkt op een rationele wijze naar problemen.</li>
+                        <li>Ziet vooral de positieve kant van zaken, kan daardoor problemen onderschatten.</li>
+                        <li>Kan door anderen als (te) weinig sensitief worden ervaren.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Extraversie     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is rustig, op zichzelf en ingetogen.</li>
+                        <li>Werkt graag alleen en zelfstandig aan opdrachten.</li>
+                        <li>Heeft een voorkeur voor een rustige omgeving, zonder veel prikkels.</li>
+                        <li>Houdt zich in gezelschap op de achtergrond.</li>
+                        <li>Geeft anderen de ruimte.</li>
+                        <li>Is afwachtend in het aangaan van contacten.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is spraakzaam, levendig en actief.</li>
+                        <li>Verkeert graag in gezelschap, krijgt energie van sociaal contact.</li>
+                        <li>Vindt het prettig daar te zijn waar de actie is.</li>
+                        <li>Treedt in gezelschap gemakkelijk op de voorgrond, kan de situatie domineren en te druk gevonden worden.</li>
+                        <li>Neemt het initiatief om contacten aan te gaan.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Consciëntieusheid     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Legt de nadruk op de grote lijnen, laat zich leiden door wat op het moment zelf gebeurt.</li>
+                        <li>Hecht minder waarde aan details.</li>
+                        <li>Is flexibel en in staat om gedrag en plannen aan te passen aan de situatie. Heeft er geen moeite mee om een taak af te breken of meerdere projecten naast elkaar uit te voeren.</li>
+                        <li>Kan in de optiek van anderen chaotisch en slordig zijn; is in hun ogen minder systematisch.</li>
+                        <li>Biedt anderen weinig structuur en duidelijkheid.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is ordelijk, planmatig en voelt zich verantwoordelijk.</li>
+                        <li>Heeft aandacht voor details.</li>
+                        <li>Kan zich goed concentreren op taken en doelen en is gedisciplineerd in het afmaken van zaken.</li>
+                        <li>Vindt regels, voorbereiding en het nakomen van afspraken belangrijk.</li>
+                        <li>Kan te precies of strikt worden in het volgen van regels en procedures; is in de ogen van anderen daardoor minder flexibel.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Openheid van geest     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is praktisch en concreet ingesteld en wil problemen zo snel mogelijk oplossen.</li>
+                        <li>Is geneigd gangbare paden te volgen. Kiest voor een beproefde aanpak bij het oplossen van problemen en zal niet zo snel nieuwe dingen uitproberen.</li>
+                        <li>Volgt gemakkelijk de meerderheid in wat zij zeggen of hoe zij zaken willen aanpakken.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is creatief en origineel in het bedenken van nieuwe ideeën of oplossingen.</li>
+                        <li>Is kritisch en heeft een eigen oordeel dat onafhankelijk is van wat anderen beweren.</li>
+                        <li>Is steeds op zoek naar iets nieuws.</li>
+                        <li>Kan minder praktisch en concreet gevonden worden.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Vriendelijkheid     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is zakelijk of afstandelijk in de omgang met anderen.</li>
+                        <li>Geeft niet zonder meer zijn/haar vertrouwen, houdt bedoelingen voor zichzelf.</li>
+                        <li>Is meer op de zaak dan op het welzijn van anderen gericht.</li>
+                        <li>Heeft weinig moeite om voor zichzelf op te komen en grenzen te stellen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is behulpzaam en gericht op samenwerking.</li>
+                        <li>Gaat uit van het goede in mensen, gelooft dat anderen van goede wil zijn.</li>
+                        <li>Is meer op het welzijn van anderen gericht, dan op de zaak of op het eigen belang. Kan zichzelf daardoor wegcijferen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+<section class="attachment">
+    <section class="attachment_introduction">
+        <div class="attachment_introduction-icon">
+            <div class="attachment_introduction-icon__marker"></div>
+        </div>
+        <h2 class="attachment-title">
+            Scores uit testen en vragenlijsten
+            <span class="attachment-subtitle">Motieven</span>
+        </h2>
+        <p class="attachment_introduction-text">
+
+            Motieven zijn aan te merken als de drijfveren van de persoon. Het zijn persoonlijke overtuigingen, wensen,
+            voorkeuren of juist afkeuren die mensen ertoe aanzetten zich voor iets in te zetten of juist zaken te mijden.
+            Motieven zijn te beschouwen als de drijvende kracht achter het gedrag van mensen in allerlei situaties.
+            Motieven zijn zeer persoonlijk. Wat voor de één een belangrijk motief is, hoeft dat voor de ander helemaal niet te zijn.
+            Bekend is dat sommige motieven erg afhankelijk zijn van de levensfase waarin iemand zich bevindt. Dat geldt bijvoorbeeld voor loopbaanmotieven.
+            Andere motieven zijn stabieler en blijven, in meer of mindere mate, het gehele leven aanwezig.
+            Voor onderstaande motieven geldt dat iedereen die in meer of mindere mate heeft. Ook hierin is variatie
+            mogelijk afhankelijk van de levensfase, maar iedereen is te karakteriseren aan de hand van scores op deze motieven.
+
+        </p>
+    </section>
+
+    <section class="listing">
+        <header class="listing-header">
+            <div class="listing-title">
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Prestatiemotivatie     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft weinig behoefte om zich te onderscheiden en beter te presteren dan anderen.</li>
+                        <li>Vindt het niet belangrijk dat resultaten duidelijk terug te leiden zijn naar de persoon zelf, om daarmee de eigen prestaties zichtbaar te maken.</li>
+                        <li>Heeft niet zo de behoefte om iets te bereiken of iets neer te zetten.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft een sterke behoefte om uitdagende taken aan te gaan en beter te presteren dan anderen.</li>
+                        <li>Houdt van taken die boven verwachting vervuld kunnen worden en waarvan de resultaten duidelijk terug te leiden zijn naar de persoon zelf. Wil graag iets bereiken.</li>
+                        <li>Is weinig geneigd te investeren in taken die naar verwachting minder opleveren.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Behoefte aan invloed     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft weinig behoefte om invloed uit te oefenen en belangrijke besluiten te nemen.</li>
+                        <li>Vindt het fijn om tijdens discussies naar anderen te luisteren en laat het nemen van belangrijke besluiten over aan anderen.</li>
+                        <li>Vindt het niet belangrijk om zich in discussies te laten gelden of gebruik te maken van zijn/haar positie om draagvlak te creëren voor de eigen standpunten.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft een sterke behoefte om invloed uit te oefenen, de leiding te nemen.</li>
+                        <li>Zoekt graag de discussie op, houdt ervan om te argumenteren. Gaat een conflict niet uit de weg.</li>
+                        <li>Heeft de neiging om situaties te zien als winnen/verliezen en eigen standpunten door te drukken, daarbij gebruikmakend van de eigen positie en invloed.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Behoefte aan acceptatie     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft weinig behoefte om te investeren in de onderlinge verhoudingen en energie te besteden aan het tot stand brengen van plezierige werkrelaties.</li>
+                        <li>Vindt het minder belangrijk om rekening te houden met anderen en goedkeuring te krijgen. Vindt het niet erg belangrijk om aardig gevonden te worden.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft behoefte aan harmonie in relaties. Houdt rekening met anderen, vindt goedkeuring van anderen belangrijk, wil aardig gevonden worden.</li>
+                        <li>Besteedt energie aan het tot stand brengen en onderhouden van plezierige, goede werkrelaties met anderen. Kan conflictmijdend zijn.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Behoefte aan autonomie     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft weinig behoefte aan vrijheid en autonomie. Accepteert regels, afspraken en door anderen opgelegde werkwijzen en richtlijnen.</li>
+                        <li>Vindt het minder belangrijk om ruimte te hebben om het werk volgens eigen inzichten in te richten.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft behoefte aan vrijheid en zelfstandigheid. Wil de ruimte hebben om volgens eigen inzichten en ideeën te werk te gaan.</li>
+                        <li>Heeft weinig met regels, normen en afspraken. Vindt het belangrijk om zo min mogelijk verplichtingen aan anderen te hebben.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+<section class="attachment">
+    <section class="attachment_introduction">
+        <div class="attachment_introduction-icon">
+            <div class="attachment_introduction-icon__marker"></div>
+        </div>
+        <h2 class="attachment-title">
+            Scores uit testen en vragenlijsten
+            <span class="attachment-subtitle">Beïnvloedingsstijlen</span>
+        </h2>
+        <p class="attachment_introduction-text">
+
+            Vaak heeft men voor het bereiken van persoonlijke doelen anderen nodig.
+            In zijn algemeenheid heeft iedereen zo zijn eigen manier om anderen te beïnvloeden zodat bepaalde persoonlijke doelen gerealiseerd kunnen worden.
+            Het overzicht hieronder laat zien in welke mate de betrokkene de verschillende manieren van beïnvloeden in het algemeen hanteert.
+
+        </p>
+    </section>
+
+    <section class="listing">
+        <header class="listing-header">
+            <div class="listing-title">
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Manipulatief     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Kiest vaak voor de veilige, vertrouwde aanpak als er iets moet worden bereikt.</li>
+                        <li>Vindt niet dat alle middelen geoorloofd zijn, hoe belangrijk een doel ook is.</li>
+                        <li>Is over het algemeen niet erg handig in het bespelen van mensen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is handig in het bespelen van anderen. Probeert zijn/haar doel te bereiken met behulp van elk middel dat daarvoor kan worden gebruikt.</li>
+                        <li>Interacties met anderen worden vaak gekleurd door de mate waarin zij iets voor hem/haar kunnen betekenen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Rechtdoorzee     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is iemand die het lastig vindt om dingen recht op de man af te zeggen. Probeert de eigen mening voorzichtig en goed doordacht in te brengen.</li>
+                        <li>Anderen kunnen deze subtiele aanpak wel waarderen, hoewel een meer directe, sturende houding in bepaalde situaties meer oplevert.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Vindt dat eerlijkheid en een directe aanpak uiteindelijk het meest opleveren, wat de omstandigheden ook zijn.</li>
+                        <li>Wil geen tijd verliezen aan spelletjes of omwegen. Kan bot overkomen, maar als anderen hem/haar eenmaal leren kennen, zullen zij merken dat het meestal goed is bedoeld.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Assertief     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Vindt het vaak lastig om duidelijk aan te geven wat de eigen doelen en prioriteiten zijn.</li>
+                        <li>Aarzelt vaak; anderen kunnen hem/haar gemakkelijk beïnvloeden. Het niet kunnen aangeven wat hij/zij wil, kan in werksituaties belemmerend werken.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Is iemand die voor zijn/haar eigen belangen opkomt.</li>
+                        <li>Laat zich niet gemakkelijk ompraten.</li>
+                        <li>De stelligheid waarmee hij/zij de eigen mening en belangen verdedigt, geeft hem/haar een natuurlijk overwicht in werksituaties.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Anticiperend     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Denkt niet altijd goed na alvorens iets te ondernemen.</li>
+                        <li>Handelt weleens op gevoel of impuls. Hij/zij krijgt daardoor regelmatig te maken met beslissingen die verkeerd uitpakken, zaken die hij/zij niet zag aankomen, of onverwachte reacties van anderen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Denkt altijd drie stappen vooruit alvorens iets te ondernemen.</li>
+                        <li>Anticipeert op mogelijke belemmeringen zodat de eigen doelen kunnen worden verwezenlijkt.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+<section class="attachment">
+    <section class="attachment_introduction">
+        <div class="attachment_introduction-icon">
+            <div class="attachment_introduction-icon__marker"></div>
+        </div>
+        <h2 class="attachment-title">
+            Scores uit testen en vragenlijsten
+            <span class="attachment-subtitle">Werkstijlen</span>
+        </h2>
+        <p class="attachment_introduction-text">
+
+            Mensen verschillen van elkaar in hoe zij tot prestaties komen.
+            Waar spant iemand zich voor in? En wat maakt dat iemand in bepaalde omstandigheden tot betere, of juist tot minder goede prestaties komt?
+            Onderstaande resultaten geven inzicht in de stijl van werken van de betrokkene.
+
+        </p>
+    </section>
+
+    <section class="listing">
+        <header class="listing-header">
+            <div class="listing-title">
+            </div>
+            <div class="listing-bar_heading">
+                <small class="left">Laag</small>
+                <small class="right">Hoog</small>
+            </div>
+        </header>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Streven naar succes     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Vindt het niet belangrijk dat succes voor de buitenwereld zichtbaar is.</li>
+                        <li>
+                            Hoeft niet uitdrukkelijk te laten zien wat het aandeel is
+                            in diverse werkzaamheden en streeft minder naar status.
+                        </li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Vindt het belangrijk om succes aan de buitenwereld te laten zien.</li>
+                        <li>Wil graag dat het duidelijk zichtbaar is wat het aandeel was in diverse werkzaamheden.</li>
+                        <li>Streeft naar status en prestige.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Streven naar kwaliteit     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Werk dat aan de maatstaven van de organisatie voldoet, is goed genoeg.</li>
+                        <li>Heeft vanuit zichzelf minder de behoefte om werk af te leveren dat aan de hoogste kwaliteitseisen voldoet.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Levert graag werk af dat aan de eigen (hoge) kwaliteitseisen voldoet.</li>
+                        <li>Spant zich zelfs bij minder aantrekkelijke taken in om deze tot een goed einde te brengen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Ontwikkelingsgerichtheid     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Vindt het leren van nieuwe vaardigheden en opdoen van kennis door studeren niet de belangrijkste zaken in het werk.</li>
+                        <li>Is niet actief bezig met professionele ontwikkeling.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Wil zich inspannen om nieuwe kennis en/of nieuwe vaardigheden te verwerven, door cursussen of zelfstudie.</li>
+                        <li>Dit niet alleen om het werk beter te kunnen uitvoeren, maar ook voor de eigen professionele ontwikkeling.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Onzekerheid over prestaties     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Is over het algemeen zeker van zichzelf als nieuwe werkzaamheden of taken moeten worden gedaan.</li>
+                        <li>Maakt zich dan niet zoveel zorgen dat er iets mis kan gaan.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Kan zich regelmatig onzeker voelen wanneer er onbekende, complexe werktaken uitgevoerd moeten worden.</li>
+                        <li>Kan in deze situaties geblokkeerd raken door het idee dat dingen mis zullen gaan.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Uitdaging zoeken     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft niet de spanning nodig die bijvoorbeeld een deadline met zich meebrengt om aan de slag te gaan.</li>
+                        <li>Weet werkzaamheden zonder die stok achter de deur te beginnen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft de spanning nodig die bijvoorbeeld een deadline met zich meebrengt om aan de slag te gaan.</li>
+                        <li>Zonder die stok achter de deur wordt het lastig om aan bepaalde taken te beginnen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Doortastend optreden     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Stelt zich vaak afwachtend op en heeft moeite met het doorhakken van knopen.</li>
+                        <li>Zal moeilijk een beslissing kunnen nemen wanneer keuzes gemaakt moeten worden.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Stelt zich niet afwachtend op, maar hakt knopen door.</li>
+                        <li>Zal met de beschikbare informatie een beslissing nemen wanneer keuzes moeten worden gemaakt.</li>
+                        <li>Lost problemen liever meteen op.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Doelgericht zijn     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Heeft meestal geen duidelijk vastomlijnd doel voor ogen.</li>
+                        <li>Pakt eerder aan wat er voorbijkomt dan dat van tevoren bedacht wordt welke richting op zal worden gegaan.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Heeft meestal een duidelijk doel voor ogen.</li>
+                        <li>Denkt in dit opzicht vooruit en spant zich in om het doel ook te halen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+        <section class="listing_row listing_row__without-marker">
+            <div class="listing_row-marker"><div class="listing_row-marker__block">&nbsp;</div></div>
+
+            <section class="listing_row-title__wrapper">
+                <h4 class="listing_row-title">        Risico nemen     </h4>
+                <div class="listing_row-body">                    <h5>Lage score</h5>
+
+
+                    <ul>
+                        <li>Houdt van werkzaamheden waarvan duidelijk is wat de uitkomst zal zijn.</li>
+                        <li>Laat het uitproberen van nieuwe benaderingen waar risico’s aan verbonden zijn liever aan anderen over.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="listing_row-bar__wrapper">
+                <div class="listing_row-bar">
+                    <section class="score-attachment-widget_score-bar">
+                        <div class="bar-attachment-widget bar-attachment-widget__score-0 bar-attachment-widget__singular">
+                            <svg version="1.0" x="0px" y="0px" viewBox="0 0 516 30">
+                                <g>
+                                    <rect rx="8" ry="8" id="score-bar-element-1" x="0" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-2" x="104" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-3" x="208" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-4" x="312" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                    <rect rx="8" ry="8" id="score-bar-element-5" x="416" y="0" width="100" height="30"
+                                          class="scorebar-attachment__blankstyle"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+                <div class="listing_row-score"></div>
+                <div class="listing_row-body">                    <h5>Hoge score</h5>
+
+
+                    <ul>
+                        <li>Houdt van de spanning die moeilijke en onzekere taken met zich meebrengen.</li>
+                        <li>Durft risico’s aan te gaan als zich kansen voordoen.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+</body>
+</html>

@@ -18,7 +18,26 @@ if (system.args.length < 3 || system.args.length > 8) {
     if (system.args.length > 3 && system.args[2].substr(-4) === ".pdf") {
         size = system.args[3].split('*');
         page.paperSize = size.length === 2 ? { width: size[0], height: size[1], margin: margin }
-                                           : { format: system.args[3], orientation: orientation, margin: margin };
+                                           : { format: system.args[3], orientation: orientation, margin: margin,
+                                                header: {
+                                                    height: "1cm",
+                                                    contents: phantom.callback(function(pageNum, numPages) {
+                                                        if (pageNum == 1) {
+                                                            return "";
+                                                        }
+                                                        return "<p>LTP.nl<span style='font-size: 6pt; font-family: \"museo-sans\",sans-serif; float:right'>" + pageNum + " / " + numPages + "</span></p>";
+                                                    })
+                                                },
+                                                footer: {
+                                                    height: "1cm",
+                                                    contents: phantom.callback(function(pageNum, numPages) {
+                                                        if (pageNum == 1) {
+                                                            return "";
+                                                        }
+                                                        return "<p>LTP.nl<span style='font-size: 6pt; font-family: \"museo-sans\",sans-serif; float:right'>" + pageNum + " / " + numPages + "</span></p>";
+                                                    })
+                                                }
+                                             };
     } else if (system.args.length > 3 && system.args[3].substr(-2) === "px") {
         size = system.args[3].split('*');
         if (size.length === 2) {
