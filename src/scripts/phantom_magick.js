@@ -27,23 +27,23 @@ if (system.args.length < 3 || system.args.length > 9) {
             if (footerSettings !== undefined) {
                 try {
                     var fs = require('fs');
-                    var footerTemplate = fs.read(footerSettings.template);
+                    var footerTemplate1 = footerSettings.template1 !== '' ? fs.read(footerSettings.template1) : '';
+                    var footerTemplate2 = footerSettings.template2 !== '' ? fs.read(footerSettings.template2) : '';
                     var footerHeight = footerSettings.height || '1cm';
 
                     paperSize.footer = {
                         height: footerHeight,
                         contents: phantom.callback(function (pageNum, numPages) {
-                            if (footerSettings.skipFirstPage && pageNum == 1) {
-                                return "";
+                            if (pageNum == 1) {
+                                return footerTemplate1.replace('{{pageNum}}', pageNum).replace('{{numPages}}', numPages);
                             }
-                            return footerTemplate.replace('{{pageNum}}', pageNum).replace('{{numPages}}', numPages);
+                            return footerTemplate2.replace('{{pageNum}}', pageNum).replace('{{numPages}}', numPages);
                         })
                     };
                 } catch (e) {
                     console.log(e);
                 }
             }
-
             page.paperSize = paperSize;
         }
     } else if (system.args.length > 3 && system.args[3].substr(-2) === "px") {
