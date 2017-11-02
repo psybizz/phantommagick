@@ -8,7 +8,8 @@ $pdfTempFile = __DIR__ . '/output.pdf';
 // changed the 2cm margin to 1cm, because the footer/header will take up 1cm as well
 $options = [
     'format'=> 'A4',
-    'margin' => '{"left": "0", "top": "1cm", "right": "0", "bottom": "1cm"}'
+    'margin' => '{"left": "0", "top": "1cm", "right": "0", "bottom": "1cm"}',
+    'footer' => '{"template1": "footer1.html", "template2": "footer2.html", "height": "1cm"}',
 ];
 
 $pdfConverter = new \Anam\PhantomMagick\Converter();
