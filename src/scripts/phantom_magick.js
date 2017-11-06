@@ -28,8 +28,8 @@ if (system.args.length < 3 || system.args.length > 9) {
                 if (footerSettings !== undefined) {
                     try {
                         var fs = require('fs');
-                        var footerTemplate1 = footerSettings.template1 !== '' ? fs.read(footerSettings.template1) : '';
-                        var footerTemplate2 = footerSettings.template2 !== '' ? fs.read(footerSettings.template2) : '';
+                        var footerTemplate1 = footerSettings.template1 !== undefined && footerSettings.template1 !== '' ? fs.read(footerSettings.template1) : '';
+                        var footerTemplate2 = footerSettings.template2 !== undefined && footerSettings.template2 !== '' ? fs.read(footerSettings.template2) : '';
                         var footerHeight = footerSettings.height || '1cm';
 
                         paperSize.footer = {
